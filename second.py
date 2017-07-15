@@ -28,7 +28,7 @@ def write_into_file_DirectMessage(direct_message, flag):
 		myfile.write("\n--> Sender :")
 		write_into_file_User(str((direct_message.sender).name), direct_message.sender, False)
 	
-	if !flag:
+	if flag is False:
 		myfile.write("\n--> Recipient : ")
 		write_into_file_User(str(direct_message.recipient.name), direct_message.recipient, False)	
 	
@@ -62,43 +62,6 @@ myfile = open('twetdata.csv', 'a')
 
 
 try:
-
-###############---------direct_messages-------#####################
-#Returns direct messages sent to the authenticating user.
-#returns list of direct message object
-
-	direct_messages_of_me = api.direct_messages()
-
-	write_into_file_func("direct_messages")
-
-	myfile.write("\n--> Recipient : ")
-		write_into_file_User(str(direct_message.recipient.name), direct_message.recipient, False)	
-
-	for i in direct_messages_of_me:
-		write_into_file_DirectMessage(i, True)
-
-	print("Successfully implemented direct_messages")
-
-
-
-###############---------sent_direct_messages-------#####################
-#Returns direct messages sent by the authenticating user.
-#returns list of direct message object
-
-	sent_direct_messages_of_me = api.sent_direct_messages()
-
-	write_into_file_func("sent_direct_messages")
-
-	myfile.write("\n--> Sender :")
-	write_into_file_User(str((direct_message.sender).name), direct_message.sender, False)
-	
-
-	for i in sent_direct_messages_of_me:
-		write_into_file_DirectMessage(i, False)
-
-
-	print("Successfully implemented sent_direct_messages")
-
 
 
 ##################------get_user------------##################
