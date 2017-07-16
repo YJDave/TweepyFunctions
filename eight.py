@@ -15,12 +15,11 @@ def write_into_file_func(func):
 	myfile.write("##################-----"+func+"------------##################")
 	myfile.write("\n\n\n")
 
-import tweepy
 
 from tweepy import (
 	OAuthHandler,
 	API,
-
+	Cursor,
 )
 
 consumer_key = '461XyHMzRdFHY8ZxN8XArPkoG'
@@ -37,7 +36,7 @@ auth.set_access_token(access_token, access_secret)
 #tweeter.api take arguments like auth_handler, host, search_host,..
 api = API(auth)
 
-myfile = open('twetdata.csv', 'a')
+myfile = open('twetdata.txt', 'a')
 
 try:
 
@@ -54,7 +53,7 @@ try:
 
 	write_into_file_func("search(by location)")
 
-	for i in tweepy.Cursor(api.search, geocode=latitude+","+longitude+","+radius).items(200):
+	for i in Cursor(api.search, geocode=latitude+","+longitude+","+radius).items(200):
 		write_into_file_Status(i)
 
 	
