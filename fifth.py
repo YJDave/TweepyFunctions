@@ -4,6 +4,7 @@ def write_into_file_Status(status):
 	myfile.write("\nMessage ID : "+str(status.id))
 	myfile.write("\nMessage : "+status.text)
 	myfile.write("\nWritten By : "+status._json['user']['name'])
+	myfile.write("\nWritter's Username : "+status._json['user']['screen_name'])
 	myfile.write("\nWritter's ID : "+str(status._json['user']['id']))
 
 
