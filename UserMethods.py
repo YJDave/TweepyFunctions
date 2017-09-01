@@ -1,55 +1,19 @@
-def write_into_file_User(user_name, user_info, flag):
+from MyData import (
 
-	myfile.write("\n--> "+str(user_name)+"\n")
-	myfile.write(str("Name : "+str(user_info.name)+"\n"))	
-	myfile.write(str("User Id : "+user_info.id_str+"\n"))
-	myfile.write(str("User Name : "+str(user_info.screen_name)+"\n"))
-	
-	if flag:
-		
-		myfile.write(str("Created at : +"+str(user_info.created_at)+"\n"))
-		myfile.write(str("No of Followers : "+str(user_info.followers_count)+"\n"))
-		myfile.write(str("No of Following : "+str(user_info.friends_count)+"\n"))
-		myfile.write(str("Description : "+str(user_info.description)+"\n"))
-		
+	write_into_file_func,
+	get_tokens,
+	write_into_file_Status,
+	write_into_file_DirectMessage,
+	write_into_file_User,
 
-def write_into_file_func(func):
-
-	myfile.write("\n\n\n")
-	myfile.write("##################-----"+func+"------------##################")
-	myfile.write("\n\n\n")
-
-
-def write_into_file_DirectMessage(direct_message, flag):
-
-	myfile.write("\nMessage : \n")
-	
-	if flag:
-		myfile.write("\n--> Sender :")
-		write_into_file_User(str((direct_message.sender).name), direct_message.sender, False)
-	
-	if flag is False:
-		myfile.write("\n--> Recipient : ")
-		write_into_file_User(str(direct_message.recipient.name), direct_message.recipient, False)	
-	
-	myfile.write(str("\n--> Message Id : "+direct_message.id_str+"\n"))
-	myfile.write(str("Time : "+str(direct_message.created_at)+"\n"))
-	myfile.write(str("Message : +"+direct_message.text+"\n"))
-	
-
+	)
 
 from tweepy import (
 	OAuthHandler,
 	API
 )
 
-consumer_key = '461XyHMzRdFHY8ZxN8XArPkoG'
-consumer_secret = 'CFMsYLcFOUCEvJ6f9wtAmGjSoivtU5Dqt2NHn8ZfdRKu3fhWh3'
-
-access_token = '794909294168854528-Gx1rbjo7iCGIQ5tGslCPuyCbDEhmD9h'
-access_secret = 'jvtsr4l755InF67FIdrcOGPO1rez2xLWQ0OYkpzsoJtAW'
-
-callback_url = "http://google.com"
+consumer_key, consumer_secret, access_token, access_secret = get_tokens()
 
 auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_secret)
@@ -57,12 +21,10 @@ auth.set_access_token(access_token, access_secret)
 #tweeter.api take arguments like auth_handler, host, search_host,..
 api = API(auth)
 
-myfile = open('twetdata.csv', 'a')
-
-
 
 try:
 
+	myfile = open('tweetdata.txt', 'a')
 
 ##################------get_user------------##################
 #returns all info of specific user
@@ -147,10 +109,6 @@ try:
 		write_into_file_User(str(i.name), i, False)
 	
 	print("Successfully implemented search_user")
-
-
-
-
 
 	myfile.close()
 except Exception as e:

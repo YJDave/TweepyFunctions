@@ -1,0 +1,151 @@
+
+
+
+##################-----direct_messages------------##################
+
+
+
+
+
+##################-----sent_direct_messages------------##################
+
+
+
+--> Yashashvi Dave
+Name : Yashashvi Dave
+User Id : 794909294168854528
+User Name : yashashvi_dave
+
+Message : 
+
+--> Sender :
+--> Message Id : 903680450366812163
+Time : 2017-09-01 18:06:23
+Message : +Hello..
+
+--> Yashashvi Dave
+Name : Yashashvi Dave
+User Id : 794909294168854528
+User Name : yashashvi_dave
+
+Message : 
+
+--> Sender :
+--> Message Id : 886486677929283587
+Time : 2017-07-16 07:24:28
+Message : +... https://t.co/CLpMKRf8Gg
+
+--> Yashashvi Dave
+Name : Yashashvi Dave
+User Id : 794909294168854528
+User Name : yashashvi_dave
+
+Message : 
+
+--> Sender :
+--> Message Id : 886298239321989128
+Time : 2017-07-15 18:55:41
+Message : +Hello..
+
+--> Yashashvi Dave
+Name : Yashashvi Dave
+User Id : 794909294168854528
+User Name : yashashvi_dave
+
+Message : 
+
+--> Sender :
+--> Message Id : 886297412373020677
+Time : 2017-07-15 18:52:24
+Message : +Hello..
+
+--> Yashashvi Dave
+Name : Yashashvi Dave
+User Id : 794909294168854528
+User Name : yashashvi_dave
+
+Message : 
+
+--> Sender :
+--> Message Id : 886295692804804611
+Time : 2017-07-15 18:45:34
+Message : +Hello..
+
+--> Yashashvi Dave
+Name : Yashashvi Dave
+User Id : 794909294168854528
+User Name : yashashvi_dave
+
+Message : 
+
+--> Sender :
+--> Message Id : 886295651209932804
+Time : 2017-07-15 18:45:24
+Message : +Hello..
+
+--> Yashashvi Dave
+Name : Yashashvi Dave
+User Id : 794909294168854528
+User Name : yashashvi_dave
+
+Message : 
+
+--> Sender :
+--> Message Id : 886273513979617283
+Time : 2017-07-15 17:17:26
+Message : +Hiii
+
+--> Yashashvi Dave
+Name : Yashashvi Dave
+User Id : 794909294168854528
+User Name : yashashvi_dave
+
+Message : 
+
+--> Sender :
+--> Message Id : 886273501954531336
+Time : 2017-07-15 17:17:23
+Message : +....
+
+--> Yashashvi Dave
+Name : Yashashvi Dave
+User Id : 794909294168854528
+User Name : yashashvi_dave
+
+Message : 
+
+--> Sender :
+--> Message Id : 886243712883445767
+Time : 2017-07-15 15:19:01
+Message : +Heyyy
+
+--> Yashashvi Dave
+Name : Yashashvi Dave
+User Id : 794909294168854528
+User Name : yashashvi_dave
+
+Message : 
+
+--> Sender :
+--> Message Id : 886243699449004035
+Time : 2017-07-15 15:18:58
+Message : +Hiii
+
+
+
+##################-----send_direct_message------------##################
+
+
+
+--> Yashashvi Dave
+Name : Yashashvi Dave
+User Id : 794909294168854528
+User Name : yashashvi_dave
+
+Message : 
+
+--> Sender :
+--> Message Id : 903680846401421316
+Time : 2017-09-01 18:07:58
+Message : +Hello..
+Message Send to User.. Message Info : 

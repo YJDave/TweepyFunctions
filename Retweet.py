@@ -2,7 +2,9 @@ from MyData import (
 
 	write_into_file_func,
 	get_tokens,
-)
+	write_into_file_Status,
+
+	)
 
 
 from tweepy import (
@@ -10,9 +12,7 @@ from tweepy import (
 	API
 )
 
-
 consumer_key, consumer_secret, access_token, access_secret = get_tokens()
-
 
 auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_secret)
@@ -20,26 +20,29 @@ auth.set_access_token(access_token, access_secret)
 #tweeter.api take arguments like auth_handler, host, search_host,..
 api = API(auth)
 
+myfile = open('twetdata.csv', 'a')
 
 try:
 
 	myfile = open('tweetdata.txt', 'a')
 
-###############------------trends_available-------#####################
-#returns json object
+##########################retweet given tweet##############################
+#Retweets a tweet. Requires the id of the tweet you are retweeting.
+#returns status object
 
-	print("43")
-	trends = api.trends_available()
-	print("32432")
+	
+	retweet_this_tweet_id = '860791905831006208'
 
-	write_into_file_func("trends_avaliabe")
+	retweet_object = api.retweet(retweet_this_tweet_id)
 
-	for i in trends:
-		myfile.write(str(i)+"\n\n")
+	write_into_file_func("retweet")
+	write_into_file_Status(retweet_object)
 
-	print("Successfully implement treands_available")
+	print("Successfully implemented retweet function")
 
 	myfile.close()
 except Exception as e:
 
 	print("Error Occured. "+ str(e) +  " Try Again. ")
+	
+

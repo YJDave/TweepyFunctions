@@ -1,13 +1,15 @@
+from MyData import (
+
+    get_tokens,
+
+    )
+
 from tweepy import (
     OAuthHandler,
     API
 )
 
-consumer_key = '461XyHMzRdFHY8ZxN8XArPkoG'
-consumer_secret = 'CFMsYLcFOUCEvJ6f9wtAmGjSoivtU5Dqt2NHn8ZfdRKu3fhWh3'
-
-access_token = '794909294168854528-Gx1rbjo7iCGIQ5tGslCPuyCbDEhmD9h'
-access_secret = 'jvtsr4l755InF67FIdrcOGPO1rez2xLWQ0OYkpzsoJtAW'
+consumer_key, consumer_secret, access_token, access_secret = get_tokens()
 
 callback_url = "http://google.com"
 
@@ -17,7 +19,7 @@ auth.set_access_token(access_token, access_secret)
 #tweeter.api take arguments like auth_handler, host, search_host,..
 api = API(auth)
 
-myfile = open('twetdata.csv', 'a')
+myfile = open('tweetdata.txt', 'a')
 
 try:
 

@@ -1,47 +1,19 @@
-def write_into_file_Friendhsip(friendship):
+from MyData import (
 
-	myfile.write("\n--> Friendhsip")
-	myfile.write("\nUser1 Name : "+friendship[0].screen_name)
-	myfile.write("\nUser1 ID : "+friendship[0].id_str)
-	myfile.write("\nUser2 Name : "+friendship[1].screen_name)
-	myfile.write("\nUser2 ID : "+friendship[1].id_str)
-	myfile.write("\nIs "+friendship[0].screen_name+" following to "+friendship[1].screen_name+" "+str(friendship[1].followed_by))
-	myfile.write("\nIs "+friendship[1].screen_name+" following to "+friendship[0].screen_name+" "+str(friendship[0].followed_by))
+	write_into_file_func,
+	get_tokens,
+	write_into_file_User,
+	write_into_file_Friendhsip,
 
-def write_into_file_User(user_name, user_info, flag):
-
-	myfile.write("\n--> "+str(user_name)+"\n")
-	myfile.write(str("Name : "+str(user_info.name)+"\n"))	
-	myfile.write(str("User Id : "+user_info.id_str+"\n"))
-	myfile.write(str("User Name : "+str(user_info.screen_name)+"\n"))
-	
-	if flag:
-		
-		myfile.write(str("Created at : +"+str(user_info.created_at)+"\n"))
-		myfile.write(str("No of Followers : "+str(user_info.followers_count)+"\n"))
-		myfile.write(str("No of Following : "+str(user_info.friends_count)+"\n"))
-		myfile.write(str("Description : "+str(user_info.description)+"\n"))
-
-
-def write_into_file_func(func):
-
-	myfile.write("\n\n\n")
-	myfile.write("##################-----"+func+"------------##################")
-	myfile.write("\n\n\n")
-
+	)
 
 from tweepy import (
 	OAuthHandler,
 	API
 )
 
-consumer_key = '461XyHMzRdFHY8ZxN8XArPkoG'
-consumer_secret = 'CFMsYLcFOUCEvJ6f9wtAmGjSoivtU5Dqt2NHn8ZfdRKu3fhWh3'
+consumer_key, consumer_secret, access_token, access_secret = get_tokens()
 
-access_token = '794909294168854528-Gx1rbjo7iCGIQ5tGslCPuyCbDEhmD9h'
-access_secret = 'jvtsr4l755InF67FIdrcOGPO1rez2xLWQ0OYkpzsoJtAW'
-
-callback_url = "http://google.com"
 
 auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_secret)
@@ -49,10 +21,10 @@ auth.set_access_token(access_token, access_secret)
 #tweeter.api take arguments like auth_handler, host, search_host,..
 api = API(auth)
 
-myfile = open('twetdata.csv', 'a')
 
 try:
 
+	myfile = open('tweetdata.txt', 'a')
 
 ###############---------followers_ids-------#####################
 #returns id of users which are followed by specific user
@@ -148,26 +120,22 @@ try:
 # #Check if user1 is followint user2 or not
 # #return True or False
 
-# 	user2 = "Medium"
-# 	user1 = "architad8"
+	user2 = "Medium"
+	user1 = "architad8"
 
-# 	check_follow = api.exists_friendship(user1, user2)
+	check_follow = api.exists_friendship(user1, user2)
 
-# 	write_into_file_func("exists_friendship")
+	write_into_file_func("exists_friendship")
 
-# 	myfile.write("\nIs "+user1+" is following to "+user2+"  user? : \n")
+	myfile.write("\nIs "+user1+" is following to "+user2+"  user? : \n")
 
-# 	myfile.write("\n"+check_follow+"\n")
+	myfile.write("\n"+check_follow+"\n")
 
-# 	print("Successfully implemented exist_friendship")
-
-
-
-
+	print("Successfully implemented exist_friendship")
 
 	myfile.close()
 except Exception as e:
 
 	print("Error Occured. "+ str(e) +  " Try Again. ")
-
+	
 
