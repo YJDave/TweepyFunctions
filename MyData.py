@@ -75,10 +75,10 @@ def get_tokens():
 
 #Enter your tokesn here.......
 
-	consumer_key = 'Q5mD59G1G5GsJ7aEGiLAlrHDh'
-	consumer_secret = 'zAHkRVFeaXe19VWhh1QQc1wrrsFJ1YMiCyF5YRtfxmHHbQFmdo'
+	consumer_key = ''
+	consumer_secret = ''
 
-	access_token = '794909294168854528-Gx1rbjo7iCGIQ5tGslCPuyCbDEhmD9h'
-	access_secret = 'jvtsr4l755InF67FIdrcOGPO1rez2xLWQ0OYkpzsoJtAW'
+	access_token = ''
+	access_secret = ''
 
 	return consumer_key, consumer_secret, access_token, access_secret
